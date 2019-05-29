@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="studentmodel" />
+        <module name="rest-api" />
+        <module name="student-model" />
+        <module name="lab1-ear" />
+        <module name="rest-connector" />
+        <module name="soapconnector" />
+        <module name="soap-connector" />
+        <module name="restconnector" />
+        <module name="lab1-ejb" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="restapi" target="1.7" />
+      <module name="restconume" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
