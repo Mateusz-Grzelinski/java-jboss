@@ -10,10 +10,10 @@
         <module name="rest-api" />
         <module name="student-model" />
         <module name="lab1-ear" />
-        <module name="rest-connector" />
+        <module name="restconnector" />
         <module name="soapconnector" />
         <module name="soap-connector" />
-        <module name="restconnector" />
+        <module name="rest-connector" />
         <module name="lab1-ejb" />
       </profile>
     </annotationProcessing>
