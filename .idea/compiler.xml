@@ -8,13 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="studentmodel" />
         <module name="rest-api" />
-        <module name="student-model" />
+        <module name="soa-jpa" />
         <module name="lab1-ear" />
         <module name="restconnector" />
         <module name="soapconnector" />
+        <module name="lab1-ejb" />
         <module name="soap-connector" />
         <module name="rest-connector" />
-        <module name="lab1-ejb" />
+        <module name="soa-dao" />
+        <module name="student-model" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

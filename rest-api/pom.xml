@@ -66,7 +66,7 @@
       <dependency>
          <groupId>org.hibernate.javax.persistence</groupId>
          <artifactId>hibernate-jpa-2.1-api</artifactId>
-         <scope>provided</scope>
+         <scope>compile</scope>
       </dependency>
 
        <!-- JSR-303 (Bean Validation) Implementation -->
@@ -85,7 +85,15 @@
        </dependency>
        <dependency>
            <groupId>pl.edu.agh.kis</groupId>
-           <artifactId>student-model</artifactId>
+           <artifactId>soa-jpa</artifactId>
+           <version>1.0</version>
+           <scope>compile</scope>
+       </dependency>
+
+
+       <dependency>
+           <groupId>pl.edu.agh.kis</groupId>
+           <artifactId>soa-dao</artifactId>
            <version>1.0</version>
            <scope>compile</scope>
        </dependency>
@@ -131,6 +139,14 @@
            <artifactId>java-jwt</artifactId>
            <version>3.8.0</version>
        </dependency>
+
+       <dependency>
+           <groupId>soa-dao</groupId>
+           <artifactId>soa-dao</artifactId>
+           <version>1.0-SNAPSHOT</version>
+           <scope>compile</scope>
+       </dependency>
+
 
    </dependencies>
 

@@ -2,7 +2,6 @@ package pl.agh.edu.kis;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.sun.javafx.beans.IDProperty;
 import org.apache.commons.io.FileUtils;
 
 import javax.ejb.Singleton;
@@ -11,18 +10,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-
-@Entity
 @XmlRootElement(name = "student")
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Student {
-    @Id
     @XmlElement
     private int id;
     @XmlElement
