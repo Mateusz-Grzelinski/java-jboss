@@ -10,13 +10,13 @@
         <module name="rest-api" />
         <module name="soa-jpa" />
         <module name="lab1-ear" />
+        <module name="student-model" />
         <module name="restconnector" />
         <module name="soapconnector" />
-        <module name="lab1-ejb" />
         <module name="soap-connector" />
         <module name="rest-connector" />
         <module name="soa-dao" />
-        <module name="student-model" />
+        <module name="lab1-ejb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -65,8 +65,14 @@ public class StudentEndpoint {
 
     @GET
     @Operation(summary = "Get all students")
-    public Response getAll() {
-        List<Student> students = studentDao.list(0, 100);
+    public Response getAll(@QueryParam("name") String name, @QueryParam("project") String project) {
+        List<Student> students = null;
+
+        if (name != null)
+            students = studentDao.getByField(name, project);
+        else
+            students = studentDao.list(0, 100);
+
         return Response.status(Response.Status.OK).entity(students).build();
     }
 
@@ -83,7 +89,7 @@ public class StudentEndpoint {
     }
 
     @POST
-    @AuthenticationRequired
+//    @AuthenticationRequired
     public Response createStudent(Student student) {
         if (student.getId() != null) {
             Student s = studentDao.get(student.getId());
