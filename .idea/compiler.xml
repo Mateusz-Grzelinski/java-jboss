@@ -10,10 +10,10 @@
         <module name="rest-api" />
         <module name="soa-jpa" />
         <module name="lab1-ear" />
-        <module name="student-model" />
+        <module name="soap-connector" />
         <module name="restconnector" />
         <module name="soapconnector" />
-        <module name="soap-connector" />
+        <module name="student-model" />
         <module name="rest-connector" />
         <module name="soa-dao" />
         <module name="lab1-ejb" />

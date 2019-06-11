@@ -85,7 +85,36 @@ public class StudentEndpoint {
         } else {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
+    }
 
+    @GET
+    @Produces(CustomMediaType.PROTOBUF_MEDIA_TYPE)
+    @Path("prot/{id}")
+    public Response getStudentProtobuf(@PathParam("id") int id) {
+
+        Student s = studentDao.get(id);
+        if (s == null)
+            return Response.status(Response.Status.NOT_FOUND).build();
+
+
+        StudentProto.Stundent.Builder builder = StudentProto.Stundent.newBuilder();
+        builder.setId(s.getId());
+        builder.setName(s.getName());
+        builder.setSurname(s.getSurname());
+
+        for (Project project : s.getProjects()) {
+            StudentProto.Project.Builder project_builder = StudentProto.Project.newBuilder();
+            project_builder.setName(project.name);
+            builder.addProject(project_builder.build());
+        }
+
+        for (Subject sub : s.getSubjects()) {
+            StudentProto.Subject.Builder sub_builder = StudentProto.Subject.newBuilder();
+            sub_builder.setName(sub.getName());
+            builder.addSubject(sub_builder.build());
+        }
+
+        return Response.status(Response.Status.OK).entity(builder.build().toByteArray()).build();
     }
 
     @POST
